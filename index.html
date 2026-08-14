@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bấm vào đây </title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background-image: url("1273FC86-2F05-48AF-957B-F72253033E87.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    text-align: center;
+}
+
+button {
+    padding: 18px 65px;
+    font-size: 28px;
+    border: 3px solid #777;
+    border-radius: 8px;
+    background: #eee;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #aaa;
+}
+
+button:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+#message {
+    display: none;
+    background: rgba(255,255,255,0.85);
+    padding: 25px;
+    margin: 20px;
+    border-radius: 20px;
+    max-width: 500px;
+}
+
+#video {
+    display: none;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <button id="start" onclick="start()">START</button>
+
+    <div id="message">
+        <h2>Gián</h2>
+
+        <button onclick="showVideo()">Xem tiếp 🎬</button>
+    </div>
+
+    <video id="video" controls playsinline>
+        <source src="IMG_2245.MOV" type="video/quicktime">
+        Trình duyệt không hỗ trợ video.
+    </video>
+
+</div>
+
+<script>
+function start() {
+    document.getElementById("start").style.display = "none";
+    document.getElementById("message").style.display = "block";
+}
+
+function showVideo() {
+    document.getElementById("message").style.display = "none";
+    document.getElementById("video").style.display = "block";
+}
+</script>
+
+</body>
+</html>
